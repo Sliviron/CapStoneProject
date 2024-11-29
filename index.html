@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMaster</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>TaskMaster</h1>
+    <nav>
+      <button id="login-btn">Login</button>
+      <button id="register-btn">Register</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Registration and Login Forms -->
+    <div id="auth-forms">
+      <form id="register-form" class="hidden">
+        <h2>Register</h2>
+        <input type="text" id="register-name" placeholder="Name" required />
+        <input type="email" id="register-email" placeholder="Email" required />
+        <input type="password" id="register-password" placeholder="Password" required />
+        <button type="submit">Register</button>
+      </form>
+
+      <form id="login-form" class="hidden">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email" required />
+        <input type="password" id="login-password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <!-- Task Management -->
+    <div id="task-manager" class="hidden">
+      <form id="task-form">
+        <h2>Create a Task</h2>
+        <input type="text" id="task-title" placeholder="Task Title" required />
+        <textarea id="task-desc" placeholder="Task Description"></textarea>
+        <input type="date" id="task-deadline" required />
+        <select id="task-priority" required>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button type="submit">Add Task</button>
+      </form>
+
+      <div id="tasks">
+        <h2>Your Tasks</h2>
+        <ul id="task-list"></ul>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
